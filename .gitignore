@@ -1,0 +1,5 @@
+/GoBarber/node_modules/
+/GoBarber/yarn.lock
+/poc/node_modules/
+/poc/yarn.lock
+/poc/yarn-error.log
