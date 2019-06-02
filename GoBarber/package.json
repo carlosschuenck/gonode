@@ -6,7 +6,8 @@
   "scripts": {
     "start": "nodemon",
     "database": "docker run --name database -p 5432:5432 -d -t kartoza/postgis",
-    "migrate": "npx sequelize db:migrate"
+    "migrate": "npx sequelize db:migrate",
+    "create-migration": "npx sequelize migration:create --name=create-appointments"
   },
   "devDependencies": {
     "eslint": "^5.16.0",
