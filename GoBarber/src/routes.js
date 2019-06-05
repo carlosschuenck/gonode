@@ -11,6 +11,7 @@ const DashboardController = require('./app/controllers/DashboardController')
 const SessionController = require('./app/controllers/SessionController')
 const FileController = require('./app/controllers/FileController')
 const AppointmentController = require('./app/controllers/AppointmentController')
+const AvailableController = require('./app/controllers/AvailableController')
 
 /**
  * Middleware
@@ -29,6 +30,7 @@ routes.get('/files/:file', FileController.show)
 
 routes.get('/', guestMiddleware, SessionController.create)
 routes.post('/signin', SessionController.store)
+routes.get('/app/logout', SessionController.destroy)
 
 routes.get('/signup', guestMiddleware, UserController.create)
 routes.post('/signup', upload.single('avatar'), UserController.store)
@@ -36,7 +38,7 @@ routes.post('/signup', upload.single('avatar'), UserController.store)
 routes.use('/app', authMiddleware)
 routes.get('/app/dashboard', DashboardController.index)
 
-routes.get('/app/logout', SessionController.destroy)
-
 routes.get('/app/appointments/new/:provider', AppointmentController.create)
+
+routes.get('/app/available/:provider', AvailableController.index)
 module.exports = routes
