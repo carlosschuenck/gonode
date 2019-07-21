@@ -1,6 +1,9 @@
 /GoBarber/node_modules/
 /GoBarber/yarn.lock
+/GoBarber/tmp/upload/
 /poc/node_modules/
 /poc/yarn.lock
 /poc/yarn-error.log
-/GoBarber/tmp/upload/
+/marketplace/node_modules/
+/marketplace/yarn.lock
+/marketplace/.vscode

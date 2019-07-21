@@ -1,0 +1,31 @@
+{
+  "scripts": {
+    "db-up": "docker-compose -f \"docker/mongo/docker-compose.yml\" up -d --build",
+    "start": "npm run db-up && nodemon src/index.js"
+  },
+  "name": "marketplace",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Carlos Schuenck",
+  "license": "MIT",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "express": "^4.17.1",
+    "express-handlebars": "^3.1.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.4",
+    "mongoose-paginate": "^5.0.3",
+    "nodemailer": "^6.3.0",
+    "nodemailer-express-handlebars": "^3.1.0",
+    "require-dir": "^1.2.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.0.1",
+    "eslint-config-standard": "^13.0.1",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "nodemon": "^1.19.1"
+  }
+}
